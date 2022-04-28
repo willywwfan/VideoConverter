@@ -1,3 +1,7 @@
 output/*
 test/*
+# pyinstaller
+dist/*
+build/*
+__pycache__/*
 
