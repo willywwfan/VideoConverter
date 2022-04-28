@@ -10,7 +10,8 @@ if __name__ == '__main__':
     if folder_name not in output_path:os.mkdir("./output/" + folder_name)
 
     for file in file_list:
-        if file.split(".")[-1] not in ["mp4", "avi", "mov", "wmv", "mkv"]:
+        if file.split(".")[-1].lower() not in ["mp4", "avi", "mov", "wmv", "mkv"]:
+            print("file name fail!")
             break
         input_video = ffmpeg.input( folder_name + "/" + file)
         (
